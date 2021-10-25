@@ -57,13 +57,21 @@ public class Main {
                     break;
                 case "2":
                     System.out.println("Введите n: ");
-                    cars = getCarsNthYear(cars, new Scanner(System.in).nextInt());
-                    showCarsList(cars);
+                    try {
+                        cars = getCarsNthYear(cars, new Scanner(System.in).nextInt());
+                        showCarsList(cars);
+                    } catch (Exception e) {
+                        System.err.println("Введите число!");
+                    }
                     break;
                 case "3":
                     System.out.println("Введите цену: ");
-                    cars = getCarsNthPrice(cars, new Scanner(System.in).nextInt());
-                    showCarsList(cars);
+                    try {
+                        cars = getCarsNthPrice(cars, new Scanner(System.in).nextInt());
+                        showCarsList(cars);
+                    } catch (Exception e) {
+                        System.err.println("Введите число!");
+                    }
                     break;
                 case "4":
                     System.out.println(getEqualCarsNumber(cars));
